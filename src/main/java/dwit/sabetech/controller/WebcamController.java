@@ -1,7 +1,7 @@
 package dwit.sabetech.controller;
 
-import dwit.sabetech.bootstrap.BootStrapWebcam;
-import dwit.sabetech.domain.Webcam;
+import dwit.sabetech.services.BootStrapWebcam;
+import dwit.sabetech.models.Webcam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

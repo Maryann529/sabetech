@@ -1,7 +1,7 @@
 package dwit.sabetech.controller;
 
-import dwit.sabetech.bootstrap.BootStrapMouse;
-import dwit.sabetech.domain.Mouse;
+import dwit.sabetech.services.BootStrapMouse;
+import dwit.sabetech.models.Mouse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

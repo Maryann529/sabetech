@@ -1,6 +1,6 @@
-package dwit.sabetech.bootstrap;
+package dwit.sabetech.services;
 
-import dwit.sabetech.domain.Computer;
+import dwit.sabetech.models.Computer;
 import dwit.sabetech.repositories.ComputerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

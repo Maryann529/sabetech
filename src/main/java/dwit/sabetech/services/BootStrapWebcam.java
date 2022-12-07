@@ -1,6 +1,6 @@
-package dwit.sabetech.bootstrap;
+package dwit.sabetech.services;
 
-import dwit.sabetech.domain.Webcam;
+import dwit.sabetech.models.Webcam;
 import dwit.sabetech.repositories.WebcamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

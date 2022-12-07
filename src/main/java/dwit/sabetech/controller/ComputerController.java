@@ -1,8 +1,7 @@
 package dwit.sabetech.controller;
 
-import dwit.sabetech.bootstrap.BootStrapComputer;
-import dwit.sabetech.domain.Computer;
-import dwit.sabetech.repositories.ComputerRepository;
+import dwit.sabetech.services.BootStrapComputer;
+import dwit.sabetech.models.Computer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

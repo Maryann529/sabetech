@@ -1,10 +1,9 @@
-package dwit.sabetech.bootstrap;
+package dwit.sabetech.services;
 
-import dwit.sabetech.domain.Keyboard;
+import dwit.sabetech.models.Keyboard;
 import dwit.sabetech.repositories.KeyboardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 

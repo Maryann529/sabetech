@@ -1,17 +1,24 @@
-package dwit.sabetech.domain;
+package dwit.sabetech.models;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "computer")
-public class Computer {
-
+public class Computer extends BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String brand;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     private String processor_speed;
     private Integer number_of_cores;
     private Integer number_of_usb;
@@ -28,8 +35,8 @@ public class Computer {
                     Integer number_of_usb,
                     Integer number_of_hdmi_ports,
                     Integer storage) {
-        this.id = id;
-        this.brand = brand;
+        this.id=id;
+        super.setBrand(brand);
         this.processor_speed = processor_speed;
         this.number_of_cores = number_of_cores;
         this.number_of_usb = number_of_usb;
@@ -37,21 +44,6 @@ public class Computer {
         this.storage = storage;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
 
     public String getProcessor_speed() {
         return processor_speed;
@@ -91,29 +83,6 @@ public class Computer {
 
     public void setStorage(Integer storage) {
         this.storage = storage;
-    }
-
-    @Override
-    public String toString() {
-        return "Computer{" +
-                "id=" + id +
-                ", brand='" + brand + '\'' +
-                ", processorSpeed='" + processor_speed + '\'' +
-                ", number_of_cores=" + number_of_cores +
-                ", number_of_usb=" + number_of_usb +
-                ", number_of_hdmi_ports=" + number_of_hdmi_ports +
-                ", storage=" + storage +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Computer computer = (Computer) o;
-
-        return Objects.equals(id, computer.id);
     }
 
     @Override

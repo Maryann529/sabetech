@@ -1,11 +1,10 @@
-package dwit.sabetech.domain;
+package dwit.sabetech.models;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "mouse")
-public class Mouse {
+public class Keyboard {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,22 +12,28 @@ public class Mouse {
 
     private String brand;
     private String model;
-    private String typeWireless;
+    private String type_wireless;
     private String color;
+    private String numeric_keypad;
+    private String backlight;
 
-    public Mouse() {
+    public Keyboard() {
     }
 
-    public Mouse(Long id,
-                 String brand,
-                 String model,
-                 String typeWireless,
-                 String color) {
+    public Keyboard(Long id,
+                    String brand,
+                    String model,
+                    String typeWireless,
+                    String color,
+                    String numeric_keypad,
+                    String backlight) {
         this.id = id;
         this.brand = brand;
         this.model = model;
-        this.typeWireless = typeWireless;
+        this.type_wireless = type_wireless;
         this.color = color;
+        this.numeric_keypad = numeric_keypad;
+        this.backlight = backlight;
     }
 
     public Long getId() {
@@ -56,11 +61,11 @@ public class Mouse {
     }
 
     public String getTypeWireless() {
-        return typeWireless;
+        return type_wireless;
     }
 
     public void setTypeWireless(String typeWireless) {
-        this.typeWireless = typeWireless;
+        this.type_wireless = typeWireless;
     }
 
     public String getColor() {
@@ -71,14 +76,32 @@ public class Mouse {
         this.color = color;
     }
 
+    public String getNumeric_keypad() {
+        return numeric_keypad;
+    }
+
+    public void setNumeric_keypad(String numeric_keypad) {
+        this.numeric_keypad = numeric_keypad;
+    }
+
+    public String getBacklight() {
+        return backlight;
+    }
+
+    public void setBacklight(String backlight) {
+        this.backlight = backlight;
+    }
+
     @Override
     public String toString() {
-        return "Mouse{" +
+        return "Keyboard{" +
                 "id=" + id +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
-                ", typeWireless='" + typeWireless + '\'' +
+                ", typeWireless='" + type_wireless + '\'' +
                 ", color='" + color + '\'' +
+                ", numeric_keypad='" + numeric_keypad + '\'' +
+                ", backlight='" + backlight + '\'' +
                 '}';
     }
 
@@ -87,9 +110,9 @@ public class Mouse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Mouse mouse = (Mouse) o;
+        Keyboard keyboard = (Keyboard) o;
 
-        return Objects.equals(id, mouse.id);
+        return Objects.equals(id, keyboard.id);
     }
 
     @Override

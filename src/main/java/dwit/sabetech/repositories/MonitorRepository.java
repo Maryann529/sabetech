@@ -1,6 +1,6 @@
 package dwit.sabetech.repositories;
 
-import dwit.sabetech.domain.Monitor;
+import dwit.sabetech.models.Monitor;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

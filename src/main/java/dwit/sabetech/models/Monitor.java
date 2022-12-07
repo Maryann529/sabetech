@@ -1,4 +1,4 @@
-package dwit.sabetech.domain;
+package dwit.sabetech.models;
 
 import javax.persistence.*;
 import java.util.Objects;

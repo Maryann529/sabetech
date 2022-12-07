@@ -1,7 +1,7 @@
 package dwit.sabetech.controller;
 
-import dwit.sabetech.bootstrap.BootStrapKeyboard;
-import dwit.sabetech.domain.Keyboard;
+import dwit.sabetech.services.BootStrapKeyboard;
+import dwit.sabetech.models.Keyboard;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

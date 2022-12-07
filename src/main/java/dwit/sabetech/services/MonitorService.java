@@ -1,19 +1,23 @@
-package dwit.sabetech.bootstrap;
+package dwit.sabetech.services;
 
-import dwit.sabetech.domain.Monitor;
+import dwit.sabetech.models.Monitor;
 import dwit.sabetech.repositories.MonitorRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class BootStrapMonitor {
+public class MonitorService {
+    //Bean ->
+//Controller->Service->Data/Repository->DB
 
-        @Autowired
         private  MonitorRepository monitorRepository;
 
-        public List<Monitor> listAll()
+    public MonitorService(MonitorRepository monitorRepository) {
+        this.monitorRepository = monitorRepository;
+    }
+
+    public List<Monitor> listAll()
         {
            return monitorRepository.findAll();
         }

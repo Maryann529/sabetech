@@ -1,10 +1,11 @@
-package dwit.sabetech.domain;
+package dwit.sabetech.models;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-public class Keyboard {
+@Table(name = "mouse")
+public class Mouse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,28 +13,22 @@ public class Keyboard {
 
     private String brand;
     private String model;
-    private String type_wireless;
+    private String typeWireless;
     private String color;
-    private String numeric_keypad;
-    private String backlight;
 
-    public Keyboard() {
+    public Mouse() {
     }
 
-    public Keyboard(Long id,
-                    String brand,
-                    String model,
-                    String typeWireless,
-                    String color,
-                    String numeric_keypad,
-                    String backlight) {
+    public Mouse(Long id,
+                 String brand,
+                 String model,
+                 String typeWireless,
+                 String color) {
         this.id = id;
         this.brand = brand;
         this.model = model;
-        this.type_wireless = type_wireless;
+        this.typeWireless = typeWireless;
         this.color = color;
-        this.numeric_keypad = numeric_keypad;
-        this.backlight = backlight;
     }
 
     public Long getId() {
@@ -61,11 +56,11 @@ public class Keyboard {
     }
 
     public String getTypeWireless() {
-        return type_wireless;
+        return typeWireless;
     }
 
     public void setTypeWireless(String typeWireless) {
-        this.type_wireless = typeWireless;
+        this.typeWireless = typeWireless;
     }
 
     public String getColor() {
@@ -76,32 +71,14 @@ public class Keyboard {
         this.color = color;
     }
 
-    public String getNumeric_keypad() {
-        return numeric_keypad;
-    }
-
-    public void setNumeric_keypad(String numeric_keypad) {
-        this.numeric_keypad = numeric_keypad;
-    }
-
-    public String getBacklight() {
-        return backlight;
-    }
-
-    public void setBacklight(String backlight) {
-        this.backlight = backlight;
-    }
-
     @Override
     public String toString() {
-        return "Keyboard{" +
+        return "Mouse{" +
                 "id=" + id +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
-                ", typeWireless='" + type_wireless + '\'' +
+                ", typeWireless='" + typeWireless + '\'' +
                 ", color='" + color + '\'' +
-                ", numeric_keypad='" + numeric_keypad + '\'' +
-                ", backlight='" + backlight + '\'' +
                 '}';
     }
 
@@ -110,9 +87,9 @@ public class Keyboard {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Keyboard keyboard = (Keyboard) o;
+        Mouse mouse = (Mouse) o;
 
-        return Objects.equals(id, keyboard.id);
+        return Objects.equals(id, mouse.id);
     }
 
     @Override

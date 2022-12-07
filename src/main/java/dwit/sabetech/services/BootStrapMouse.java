@@ -1,5 +1,5 @@
-package dwit.sabetech.bootstrap;
-import dwit.sabetech.domain.Mouse;
+package dwit.sabetech.services;
+import dwit.sabetech.models.Mouse;
 import dwit.sabetech.repositories.MouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

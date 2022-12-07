@@ -1,7 +1,7 @@
 package dwit.sabetech.controller;
 
-import dwit.sabetech.bootstrap.BootStrapMonitor;
-import dwit.sabetech.domain.Monitor;
+import dwit.sabetech.services.MonitorService;
+import dwit.sabetech.models.Monitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 public class MonitorController {
 
     @Autowired
-    private BootStrapMonitor bootStrapMonitor;
+    private MonitorService bootStrapMonitor;
 
     @GetMapping("/monitor")
     public List<Monitor> list() {

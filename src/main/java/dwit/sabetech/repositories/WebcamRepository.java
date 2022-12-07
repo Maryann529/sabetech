@@ -1,6 +1,6 @@
 package dwit.sabetech.repositories;
 
-import dwit.sabetech.domain.Webcam;
+import dwit.sabetech.models.Webcam;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

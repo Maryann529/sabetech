@@ -1,6 +1,6 @@
 package dwit.sabetech.repositories;
 
-import dwit.sabetech.domain.Mouse;
+import dwit.sabetech.models.Mouse;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
